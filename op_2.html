@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Input Check</title>
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    
+    <style>
+        body {
+            background-color: #f0f0f0;
+        }
+        
+        #re {
+            color: #003cff;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body class="d-flex justify-content-center align-items-center vh-100">
+    <div class="container text-center" id="cl">
+        <h1 class="mb-4">Input Comparison Tool</h1>
+
+        <input type="text" id="input" class="form-control w-50 mx-auto mb-3" placeholder="Type something..." oninput="updateCharacterCount()">
+        <button class="btn btn-primary" onclick="aa()">Check</button>
+        
+        <p id="charCount" class="mt-3 text-secondary">Character count: 0</p>
+        <p id="re"></p> <!-- Paragraph to show results -->
+    </div>
+
+    <div id="hiddenDiv" style="display: none;">
+        <h1>asdfas</h1>
+    </div>
+
+    <!-- JavaScript -->
+    <script>
+
+
+        function aa() {
+            let inputText = document.getElementById("input").value; // Trim to remove spaces
+            if(inputText == "coad")
+{
+    location.href="img.png"
+}            let hiddenDiv = document.getElementById("hiddenDiv");
+            let cl = document.getElementById("cl")
+
+
+    let result = inputText
+    .replace(/\b1b\b/g, "a")
+    .replace(/\b2b\b/g, "b")
+    .replace(/\b3b\b/g, "c")
+    .replace(/\b4b\b/g, "d")
+    .replace(/\b5b\b/g, "e")
+    .replace(/\b1c\b/g, "f")
+    .replace(/\b2c\b/g, "g")
+    .replace(/\b3c\b/g, "h")
+    .replace(/\b4c\b/g, "i")
+    .replace(/\b5c\b/g, "j")
+    .replace(/\b1d\b/g, "k")
+    .replace(/\b2d\b/g, "l")
+    .replace(/\b3d\b/g, "m")
+    .replace(/\b4d\b/g, "n")
+    .replace(/\b5d\b/g, "o")
+    .replace(/\b1e\b/g, "p")
+    .replace(/\b2e\b/g, "q")
+    .replace(/\b3e\b/g, "r")
+    .replace(/\b4e\b/g, "s")
+    .replace(/\b5e\b/g, "t")
+    .replace(/\b1f\b/g, "u")
+    .replace(/\b2f\b/g, "v")
+    .replace(/\b3f\b/g, "w")
+    .replace(/\b4f\b/g, "x")
+    .replace(/\b5f\b/g, "y")
+    .replace(/\b1g\b/g, "z"); // Replaces "b1" with "a" and "4e" with "s"
+    document.getElementById("re").textContent = result || "No match found.";
+    console.log(result);
+        }
+
+        function updateCharacterCount() {
+            let charCount = document.getElementById("input").value.length;
+            document.getElementById("charCount").textContent = "Character count: " + charCount;
+        }
+
+        
+       
+
+        
+        function updateCharacterCount() {
+            let charCount = document.getElementById("input").value.length;
+            document.getElementById("charCount").textContent = "Character count: " + charCount;
+        }
+
+        
+    </script>
+</body>
+</html>
